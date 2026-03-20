@@ -1,0 +1,14 @@
+{
+  "description": "Coaching gym asking explicitly about Train — HIGH confidence, Train",
+  "expected": {
+    "result": "HIGH",
+    "product": "Train"
+  },
+  "input": {
+    "customer_name": "Sarah Kim",
+    "customer_email": "sarah@elitecoaching.com",
+    "stripe_plan": "pro",
+    "profitwell_plans": "PushPress Pro",
+    "conversation_text": "Hi! We're a coaching gym and we deliver custom workout programs to about 200 athletes. I saw something about a Train add-on for programming delivery. Can you tell me more about Train and how much it costs? We've been using a separate app but would love to consolidate."
+  }
+}

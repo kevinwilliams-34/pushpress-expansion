@@ -1,0 +1,14 @@
+{
+  "description": "Gym owner explicitly asking about Grow pricing — HIGH confidence, Grow",
+  "expected": {
+    "result": "HIGH",
+    "product": "Grow"
+  },
+  "input": {
+    "customer_name": "Mike Torres",
+    "customer_email": "mike@irongym.com",
+    "stripe_plan": "base",
+    "profitwell_plans": "PushPress Base",
+    "conversation_text": "Hey, I've been looking at the Grow add-on. What does it cost? We really need something for lead capture and our website is a mess. Are there any discounts if we add it to our current plan?"
+  }
+}

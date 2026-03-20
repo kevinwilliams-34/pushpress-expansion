@@ -1,0 +1,14 @@
+{
+  "description": "Gym owner asking about website features they don't have — MEDIUM confidence, Grow",
+  "expected": {
+    "result": "MEDIUM",
+    "product": "Grow"
+  },
+  "input": {
+    "customer_name": "Dave Chen",
+    "customer_email": "dave@peakperformance.com",
+    "stripe_plan": "base",
+    "profitwell_plans": "PushPress Base",
+    "conversation_text": "Does PushPress have any tools for capturing leads from our website? We're getting a lot of walk-ins asking if we have an online presence. Also curious if there are any marketing automation features in the platform."
+  }
+}

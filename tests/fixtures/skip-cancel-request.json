@@ -1,0 +1,13 @@
+{
+  "description": "Churn risk — customer asking to cancel Grow, not upsell",
+  "expected": {
+    "result": "SKIP"
+  },
+  "input": {
+    "customer_name": "Carlos Mendez",
+    "customer_email": "carlos@gymfit360.com",
+    "stripe_plan": "pro_grow",
+    "profitwell_plans": "PushPress Pro, PushPress Grow",
+    "conversation_text": "Hey, can I cancel Grow? We're going to use a different website builder and don't need it anymore. How do I remove it from my plan?"
+  }
+}

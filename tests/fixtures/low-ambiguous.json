@@ -1,0 +1,13 @@
+{
+  "description": "Vague mention of wanting more features — LOW confidence",
+  "expected": {
+    "result": "LOW"
+  },
+  "input": {
+    "customer_name": "James Wright",
+    "customer_email": "james@crossfitwestside.com",
+    "stripe_plan": "base",
+    "profitwell_plans": "PushPress Base",
+    "conversation_text": "Hey, just checking in. Are there any new features coming to PushPress soon? We've been using the platform for 6 months and overall happy. Just wondering what's on the roadmap."
+  }
+}

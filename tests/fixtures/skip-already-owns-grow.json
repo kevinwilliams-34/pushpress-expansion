@@ -1,0 +1,13 @@
+{
+  "description": "Customer already has Grow — should be SKIP",
+  "expected": {
+    "result": "SKIP"
+  },
+  "input": {
+    "customer_name": "Lisa Park",
+    "customer_email": "lisa@strongwomen.com",
+    "stripe_plan": "pro_grow",
+    "profitwell_plans": "PushPress Pro, PushPress Grow",
+    "conversation_text": "How do I set up my Grow website? I can't figure out how to add my class schedule to the landing page."
+  }
+}

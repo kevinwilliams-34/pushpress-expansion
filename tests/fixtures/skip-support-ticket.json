@@ -1,0 +1,13 @@
+{
+  "description": "Pure technical support — Grow bug report, not an upsell",
+  "expected": {
+    "result": "SKIP"
+  },
+  "input": {
+    "customer_name": "Tom Bradley",
+    "customer_email": "tom@boxingclub.com",
+    "stripe_plan": "pro_grow",
+    "profitwell_plans": "PushPress Pro, PushPress Grow",
+    "conversation_text": "Grow isn't showing my classes correctly on the website. The schedule is showing yesterday's classes instead of today's. This has been happening since Tuesday. Can you help me fix it?"
+  }
+}

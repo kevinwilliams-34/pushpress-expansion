@@ -1,0 +1,13 @@
+{
+  "description": "Customer already has Train — support question about sync, not upsell",
+  "expected": {
+    "result": "SKIP"
+  },
+  "input": {
+    "customer_name": "Jorja Thompson",
+    "customer_email": "jorja@jorcoachingathletics.com",
+    "stripe_plan": "pro_train",
+    "profitwell_plans": "PushPress Pro, PushPress Train",
+    "conversation_text": "Train workouts aren't syncing to my athletes' apps. They signed in yesterday and their programming from this week isn't showing up. Is there an issue with the sync?"
+  }
+}

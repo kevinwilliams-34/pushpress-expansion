@@ -1,0 +1,14 @@
+run = "npm run build && npm start"
+entrypoint = "src/index.ts"
+language = "nodejs"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run build && npm start"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
