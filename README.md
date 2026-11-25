@@ -17,7 +17,8 @@ Make.com sends a webhook for each Intercom conversation event (created or replie
 - `src/index.ts`: CLI entry point (commander): `scan`, `serve`, `report`, `review`, `skill`.
 - `src/server.ts`: HTTP router and the webhook handler (`handleWebhook`).
 - `src/commands/`: `scan.ts` (pull and score a window), `serve.ts` (HTTP server plus a daily scan timer), `report.ts`, `review.ts`, `skill.ts`.
-- `src/core/`: `signals.ts` (keyword pre-screen), `scorer.ts` (calls the Make scorer and parses its reply), `guardrail.ts` (ownership skip), `prompt.ts` (loads the skill prompt), `src/types.ts`.
+- `src/core/`: `signals.ts` (keyword pre-screen), `scorer.ts` (calls the Make scorer and parses its reply), `guardrail.ts` (ownership skip), `prompt.ts` (loads the skill prompt).
+- `src/types.ts`: shared types.
 - `src/integrations/`: `intercom.ts` (Intercom REST API, version 2.11), `slack.ts` (Slack Web API).
 - `src/db/schema.ts`: SQLite schema and queries (`signals` and feedback).
 - `skill/SKILL.md`: the scoring prompt. `skill/pushpress-patterns.md`: reference material for it.
@@ -65,7 +66,7 @@ Listed in `.env.example` but not read anywhere in `src/`: `ANTHROPIC_API_KEY`, `
 ## Do not break
 
 - `handleWebhook` in `src/server.ts`: Intercom read, scoring, `insertSignal`, Slack post for HIGH and MEDIUM.
-- `parseClaudeResponse` in `src/core/scorer.ts`: expects `RESULT:`, `PRODUCT:` and related lines in the scorer's reply. It must match the output format in `skill/SKILL.md`.
+- `parseClaudeResponse` in `src/core/scorer.ts`: reads `RESULT:`, `PRODUCT:`, `SIGNAL_TYPE:`, `QUOTE:`, `ACTION:` and `REASON:` lines from the scorer's reply and falls back to SKIP/Unknown/N/A when one is missing. The output format is defined by the Make scorer scenario, which is not in this repo. `skill/SKILL.md` does not define it.
 - `runGuardrail` in `src/core/guardrail.ts`: the ownership skip.
 - `postSignalAlert` in `src/integrations/slack.ts`: Slack alert format and channel.
 - `src/db/schema.ts`: the `signals` table and feedback columns. Existing data depends on them.
